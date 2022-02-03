@@ -20,6 +20,9 @@ dev_dependencies:
     sdk: flutter
 
   flutter_lints: ^1.0.0
+  faker: ^2.0.0
+  test: ^1.17.12
+  mocktail: ^0.2.0
 
 flutter:
   uses-material-design: true
