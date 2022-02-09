@@ -4,7 +4,7 @@ import '../../../errors/errors.dart';
 abstract class HttpError extends DomainError {
   const HttpError._({String message = ''}) : super(message: message);
 
-  Type get type;
+  Type get type => runtimeType;
 
   factory HttpError.badRequest({String message = ''}) => _BadRequest(message: message);
   factory HttpError.unauthorized({String message = ''}) => _Unauthorized(message: message);
@@ -17,51 +17,30 @@ abstract class HttpError extends DomainError {
 
 class _BadRequest extends HttpError {
   _BadRequest({String message = ''}) : super._(message: message);
-
-  @override
-  Type get type => runtimeType;
 }
 
 class _Unauthorized extends HttpError {
   _Unauthorized({String message = ''}) : super._(message: message);
-
-  @override
-  Type get type => runtimeType;
 }
 
 class _Forbidden extends HttpError {
   _Forbidden({String message = ''}) : super._(message: message);
-
-  @override
-  Type get type => runtimeType;
 }
 
 class _NotFound extends HttpError {
   _NotFound({String message = ''}) : super._(message: message);
-
-  @override
-  Type get type => runtimeType;
 }
 
 class _InvalidData extends HttpError {
   _InvalidData({String message = ''}) : super._(message: message);
-
-  @override
-  Type get type => runtimeType;
 }
 
 class _TimeOut extends HttpError {
   _TimeOut({String message = ''}) : super._(message: message);
-
-  @override
-  Type get type => runtimeType;
 }
 
 class _ServerError extends HttpError {
   _ServerError({String message = ''}) : super._(message: message);
-
-  @override
-  Type get type => runtimeType;
 }
 
 extension ConvertToBaseError on HttpError {
