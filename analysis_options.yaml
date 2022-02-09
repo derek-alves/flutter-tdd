@@ -8,7 +8,7 @@ linter:
   rules:
     # Errors Rules
     always_use_package_imports: false
-    avoid_dynamic_calls: true
+    avoid_dynamic_calls: false
     avoid_empty_else: true
     avoid_print: true
     avoid_relative_lib_imports: true
@@ -134,10 +134,10 @@ linter:
     prefer_double_quotes: false
     prefer_equal_for_default_values: true
     prefer_expression_function_bodies: true
-    prefer_final_fields: true
+    prefer_final_fields: false
     prefer_final_in_for_each: true
     prefer_final_locals: true
-    prefer_final_parameters: true
+    prefer_final_parameters: false
     prefer_for_elements_to_map_fromIterable: true
     prefer_foreach: true
     prefer_function_declarations_over_variables: true

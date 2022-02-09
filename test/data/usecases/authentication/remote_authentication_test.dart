@@ -40,11 +40,11 @@ void main() {
 
     httpClient.mockRequest();
   });
+
   test(
     'Should call HttpClien with correct URL',
     () async {
       await sut.call();
-
       verify(() => httpClient.request(url: url));
     },
   );
